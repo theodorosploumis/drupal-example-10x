@@ -1,0 +1,26 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: Card
+status: BETA
+schemas:
+  props:
+    type: object
+    required:
+      - header
+    properties:
+      header:
+        type: string
+        title: Header
+        description: The card header
+        examples:
+          - I am a header!
+  slots:
+    type: object
+    required:
+      - card_body
+    properties:
+      card_body:
+        type: string
+        title: Body
+        description: The contents of the card.
+        examples:
+          - <p>Foo is <strong>NOT</strong> bar.</p>

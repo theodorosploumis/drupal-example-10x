@@ -1,0 +1,13 @@
+name: 'SDC test theme'
+type: theme
+description: 'Test theme for sdc that enforces schema and provides a schema-less component.'
+# version: VERSION
+base theme: sdc_theme_test
+core_version_requirement: ^9 || ^10
+
+enforce_sdc_schemas: true
+
+# Information added by Drupal.org packaging script on 2023-03-20
+version: '2.0.0-alpha4'
+project: 'sdc'
+datestamp: 1679333492

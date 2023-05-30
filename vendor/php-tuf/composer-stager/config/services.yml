@@ -1,0 +1,20 @@
+---
+services:
+
+    _defaults:
+        autoconfigure: true
+        autowire: true
+
+    PhpTuf\ComposerStager\:
+        resource: '../src/*'
+        public: true
+        exclude:
+            - '../src/Domain/Exception'
+            - '../src/Infrastructure/Value'
+
+    PhpTuf\ComposerStager\Domain\Service\FileSyncer\FileSyncerInterface:
+        factory: [ 'PhpTuf\ComposerStager\Infrastructure\Factory\FileSyncer\FileSyncerFactory', 'create' ]
+
+    Symfony\Component\Filesystem\Filesystem: ~
+
+    Symfony\Component\Process\ExecutableFinder: ~

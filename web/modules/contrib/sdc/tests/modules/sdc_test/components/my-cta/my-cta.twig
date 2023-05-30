@@ -1,0 +1,6 @@
+{% if target is not empty %}
+  {% set sdcAttributes = sdcAttributes.setAttribute('target', target) %}
+{% endif %}
+<a {{ sdcAttributes }} href="{{ href }}">
+  {{ text }}
+</a>

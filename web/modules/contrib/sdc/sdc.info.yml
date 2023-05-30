@@ -1,0 +1,13 @@
+name: Single Directory Components
+type: module
+description: 'Allows to declare, discover, and render self-contained components.'
+core_version_requirement: ^10
+package: Core (Experimental)
+lifecycle: experimental
+dependencies:
+  - drupal:serialization
+
+# Information added by Drupal.org packaging script on 2023-03-20
+version: '2.0.0-alpha4'
+project: 'sdc'
+datestamp: 1679333492
