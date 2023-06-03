@@ -1,0 +1,20 @@
+uuid: d29bab89-8847-4e91-ae39-ce7636197cad
+langcode: en
+status: true
+dependencies:
+  theme:
+    - exgin
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: exgin_primary_admin_actions
+theme: exgin
+region: highlighted
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

@@ -1,0 +1,25 @@
+uuid: a59b6882-9d01-47ba-8c56-023b754a9589
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - exgin
+_core:
+  default_config_hash: n_nlgjggHVfQt2H__zvLOKB2YtjPDbQ5tHijF9LE1aM
+id: exgin_site_branding
+theme: exgin
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

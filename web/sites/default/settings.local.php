@@ -181,3 +181,6 @@ $settings['config_exclude_modules'] = [
 $settings["config_sync_directory"] = '../config/default';
 
 $settings['simple_environment_indicator'] = '@LOCAL + ddev';
+
+// Webprofiler
+$settings['tracer_plugin'] = 'stopwatch_tracer';

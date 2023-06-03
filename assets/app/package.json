@@ -1,0 +1,16 @@
+{
+    "name": "app",
+    "version": "1.0.0",
+    "license": "ISC",
+  "scripts": {
+    "development": "npx encore dev",
+    "production": "npx encore production",
+    "watch": "npx encore dev --watch",
+    "build": "npx encore production --progress"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.22.3",
+    "@symfony/webpack-encore": "^4.3.0",
+    "webpack-notifier": "^1.15.0"
+  }
+}

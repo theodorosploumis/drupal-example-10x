@@ -1,0 +1,22 @@
+uuid: 18a96582-461b-40ff-8755-d4139d760753
+langcode: en
+status: true
+dependencies:
+  theme:
+    - exgin
+_core:
+  default_config_hash: ydSxdq7R66I8UMC460rOzlfzvlUL4VRbdwc6z9DWaUI
+id: exgin_secondary_local_tasks
+theme: exgin
+region: highlighted
+weight: -2
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

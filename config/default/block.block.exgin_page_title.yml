@@ -1,0 +1,20 @@
+uuid: 748a0dae-b114-4a82-8b0d-6f5e8533891b
+langcode: en
+status: true
+dependencies:
+  theme:
+    - exgin
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: exgin_page_title
+theme: exgin
+region: sidebar_first
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

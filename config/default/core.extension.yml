@@ -9,14 +9,17 @@ module:
   breakpoint: 0
   ckeditor5: 0
   comment: 0
+  component_builder: 0
   config: 0
   contact: 0
   contextual: 0
+  customy: 0
   datetime: 0
   datetime_range: 0
   dblog: 0
   devel_generate: 0
   editor: 0
+  entity: 0
   field: 0
   field_layout: 0
   file: 0
@@ -26,6 +29,7 @@ module:
   help_topics: 0
   history: 0
   image: 0
+  inline_entity_form: 0
   layout_discovery: 0
   link: 0
   media: 0
@@ -52,9 +56,12 @@ module:
   user: 0
   workspaces: 0
   views: 10
+  entrypoints: 20
   standard: 1000
 theme:
   olivero: 0
   claro: 0
   gin: 0
+  stable9: 0
+  exgin: 0
 profile: standard

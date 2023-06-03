@@ -1,0 +1,1 @@
+(self.webpackChunkapp=self.webpackChunkapp||[]).push([[143],{310:()=>{var e;null!==(e=window.document.querySelector("#ssr-root"))&&(e.innerHTML=e.innerHTML+"<h2>... and I got appended on the client-side.</h2>")}},e=>{var n;n=310,e(e.s=n)}]);

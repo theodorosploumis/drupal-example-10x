@@ -1,0 +1,39 @@
+web/core/
+web/modules/contrib/
+web/themes/contrib/
+web/profiles/contrib/
+web/libraries/
+drush/contrib/
+vendor
+
+# Ignore paths that contain user-generated content.
+web/sites/*/files
+web/sites/*/private
+private-files
+
+web/sites/all/assets/app_dev*
+
+# DB backups
+backups
+
+# Settings overrides
+web/sites/default/*.settings.*.php
+web/sites/default/settings.*.php
+
+# Ignore .env and keys
+.env
+
+# IDE
+# PhpStorm
+.idea/
+.phpstorm.meta.php
+
+# VSCode
+.vscode
+.history
+
+# Ignore backup files
+*.sql*
+*.mysql*
+*.tar*
+*.gz*

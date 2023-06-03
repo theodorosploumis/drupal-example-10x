@@ -1,0 +1,10 @@
+{
+  "entrypoints": {
+    "app": {
+      "js": [
+        "/sites/all/assets/app/runtime.989b2027.js",
+        "/sites/all/assets/app/app.3958d850.js"
+      ]
+    }
+  }
+}

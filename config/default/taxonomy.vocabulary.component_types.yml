@@ -1,0 +1,10 @@
+uuid: 5f809c2e-ca7b-4e69-9469-547d1f95c246
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: abmmzYeLdkKgT_psAApn9APuH_JPky6OpaHuEFGv-u0
+name: 'Component Types'
+vid: component_types
+description: 'Component Types'
+weight: 0

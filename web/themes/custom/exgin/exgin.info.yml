@@ -1,0 +1,22 @@
+name: exgin
+type: theme
+'base theme': stable9
+starterkit: true
+version: VERSION
+libraries:
+  - exgin/base
+  - exgin/messages
+  - core/normalize
+libraries-extend:
+  user/drupal.user:
+    - exgin/user
+  core/drupal.dropbutton:
+    - exgin/dropbutton
+  core/drupal.dialog:
+    - exgin/dialog
+  file/drupal.file:
+    - exgin/file
+  core/drupal.progress:
+    - exgin/progress
+core_version_requirement: ^10
+generator: 'starterkit_theme:10.0.9'

@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Contains customy.module.
+ */
+
+/**
+ * Implements hook_page_attachments().
+ */
+function customy_page_attachments(array &$page) {
+//  $page['#attached']['library'][] = 'entrypoints/app';
+}

@@ -1,0 +1,13 @@
+{
+    "name": "customy",
+    "type": "drupal-module",
+    "description": "Custom module for current site",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/customy",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/customy",
+        "source": "http://cgit.drupalcode.org/customy"
+    }
+}

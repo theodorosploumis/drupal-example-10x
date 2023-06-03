@@ -1,0 +1,23 @@
+uuid: 11de0cb8-059f-41ff-88a6-8b180e69e973
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+  theme:
+    - exgin
+_core:
+  default_config_hash: 0gq3VPg-_UM69FCCWurLFIrrnIjC2HLKhwo9iQNtcUo
+id: exgin_syndicate
+theme: exgin
+region: sidebar_first
+weight: 0
+provider: null
+plugin: node_syndicate_block
+settings:
+  id: node_syndicate_block
+  label: 'RSS feed'
+  label_display: '0'
+  provider: node
+  block_count: 10
+visibility: {  }
