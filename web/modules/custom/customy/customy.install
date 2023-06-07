@@ -21,10 +21,20 @@ function customy_update_10001(): void {
    */
   $moduleHandler = \Drupal::service('module_handler');
 
+  /**
+   * @var $config_factory \Drupal\Core\Config\ConfigFactory
+   */
+  $config_factory = \Drupal::service('config.factory');
+
+  /**
+   * @var $configImporter \Drupal\Core\Config\ConfigImporter
+   */
+  $configImporter = \Drupal::service('config.importer');
+
   foreach ($modules_to_disable as $module) {
     if ($moduleHandler->moduleExists($module)) {
-//      $moduleHandler->disable([$module]);
-      drupal_flush_all_caches();
+      // Import the configuration.
+      $configImporter->import();
       \Drupal::logger('customy')->notice('Disabled the "@module" module.', ['@module' => $module]);
     }
   }
