@@ -16,13 +16,18 @@ function customy_update_10001(): void {
   ];
 
   // Modules service
+  /**
+   * @var $moduleHandler Drupal\Core\Extension\ModuleHandler
+   */
   $moduleHandler = \Drupal::service('module_handler');
 
   foreach ($modules_to_disable as $module) {
     if ($moduleHandler->moduleExists($module)) {
-      $moduleHandler->disable([$module]);
+//      $moduleHandler->disable([$module]);
       drupal_flush_all_caches();
       \Drupal::logger('customy')->notice('Disabled the "@module" module.', ['@module' => $module]);
     }
   }
 }
+
+
