@@ -15,9 +15,12 @@ function customy_update_10001(): void {
     "editoria11y"
   ];
 
+  // Modules service
+  $moduleHandler = \Drupal::service('module_handler');
+
   foreach ($modules_to_disable as $module) {
     if (\Drupal::moduleHandler()->moduleExists($module)) {
-      \Drupal::moduleHandler()->disable([$module]);
+      $moduleHandler->disable([$module]);
       drupal_flush_all_caches();
       \Drupal::logger('customy')->notice('Disabled the "@module" module.', ['@module' => $module]);
     }
