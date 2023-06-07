@@ -1,5 +1,0 @@
-file_syncer: php
-executables:
-  composer: ~
-  rsync: ~
-additional_trusted_composer_plugins: []
