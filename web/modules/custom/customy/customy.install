@@ -15,7 +15,6 @@ function customy_update_10001(): void {
     "editoria11y"
   ];
 
-  // Modules service
   /**
    * @var $moduleHandler Drupal\Core\Extension\ModuleHandler
    */
@@ -27,12 +26,10 @@ function customy_update_10001(): void {
   $moduleInstaller = \Drupal::service('module_installer');
 
   foreach ($modules_to_disable as $module) {
-    if ($moduleHandler->moduleExists($module)) {
-      // Disable the modules.
-      $moduleInstaller->uninstall([$module]);
-      // Just log a message on dblog
-      \Drupal::logger('customy')->notice('Programmatically disabled the "@module" module.', ['@module' => $module]);
-    }
+    // Disable the modules.
+    $moduleInstaller->uninstall([$module]);
+    // Just log a message on dblog
+    \Drupal::logger('customy')->notice('Programmatically disabled the "@module" module.', ['@module' => $module]);
   }
 }
 
