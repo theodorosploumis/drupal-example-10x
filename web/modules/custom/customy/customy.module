@@ -11,3 +11,18 @@
 function customy_page_attachments(array &$page) {
 //  $page['#attached']['library'][] = 'entrypoints/app';
 }
+
+function customy_update_1001() {
+  // Disable the "automated_cron" module.
+  \Drupal::service('module_installer')->uninstall(['automated_cron']);
+
+//  // Remove the "automated_cron" module from composer.json.
+//  $composer_manager = \Drupal::service('composer_manager');
+//  $composer_manager->removePackage('vendor/automated_cron');
+//
+//  // Save the composer.json file.
+//  $composer_manager->writeComposerFile();
+//
+//  // Clear the Drupal cache.
+//  drupal_flush_all_caches();
+}
