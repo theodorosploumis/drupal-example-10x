@@ -19,6 +19,7 @@ module:
   dblog: 0
   devel_generate: 0
   editor: 0
+  editoria11y: 0
   entity: 0
   field: 0
   field_layout: 0
@@ -55,6 +56,7 @@ module:
   update: 0
   user: 0
   workspaces: 0
+  xray_audit: 0
   views: 10
   entrypoints: 20
   standard: 1000
