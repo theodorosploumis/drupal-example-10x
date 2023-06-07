@@ -22,20 +22,16 @@ function customy_update_10001(): void {
   $moduleHandler = \Drupal::service('module_handler');
 
   /**
-   * @var $config_factory \Drupal\Core\Config\ConfigFactory
+   * @var $moduleInstaller \Drupal\Core\Extension\ModuleInstaller
    */
-  $config_factory = \Drupal::service('config.factory');
-
-  /**
-   * @var $configImporter \Drupal\Core\Config\ConfigImporter
-   */
-  $configImporter = \Drupal::service('config.importer');
+  $moduleInstaller = \Drupal::service('module_installer');
 
   foreach ($modules_to_disable as $module) {
     if ($moduleHandler->moduleExists($module)) {
-      // Import the configuration.
-      $configImporter->import();
-      \Drupal::logger('customy')->notice('Disabled the "@module" module.', ['@module' => $module]);
+      // Disable the modules.
+      $moduleInstaller->uninstall([$module]);
+      // Just log a message on dblog
+      \Drupal::logger('customy')->notice('Programmatically disabled the "@module" module.', ['@module' => $module]);
     }
   }
 }
