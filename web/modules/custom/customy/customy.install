@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * Contains customy.install.
+ */
+
+/**
+ * Implements hook_update_N().
+ */
+function customy_update_1001(): void {
+  // Disable modules.
+  $modules_to_disable = [
+    "xray_audit",
+    "editoria11y"
+  ];
+
+  foreach ($modules_to_disable as $module) {
+    if (\Drupal::moduleHandler()->moduleExists($module)) {
+      \Drupal::moduleHandler()->disable([$module]);
+      drupal_flush_all_caches();
+      \Drupal::logger('customy')->notice('Disabled the "@module" module.', ['@module' => $module]);
+    }
+  }
+}
