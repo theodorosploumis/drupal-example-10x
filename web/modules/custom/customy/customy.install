@@ -8,7 +8,7 @@
 /**
  * Implements hook_update_N().
  */
-function customy_update_1001(): void {
+function customy_update_10001(): void {
   // Disable modules.
   $modules_to_disable = [
     "xray_audit",
