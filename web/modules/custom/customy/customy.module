@@ -12,17 +12,21 @@ function customy_page_attachments(array &$page) {
 //  $page['#attached']['library'][] = 'entrypoints/app';
 }
 
+/**
+ * Implements hook_update_N().
+ */
 function customy_update_1001() {
-  // Disable the "automated_cron" module.
-  \Drupal::service('module_installer')->uninstall(['automated_cron']);
+  // Disable modules.
+  $modules_to_dsable = [
+    "xray_audit",
+    "editoria11y"
+  ];
 
-//  // Remove the "automated_cron" module from composer.json.
-//  $composer_manager = \Drupal::service('composer_manager');
-//  $composer_manager->removePackage('vendor/automated_cron');
-//
-//  // Save the composer.json file.
-//  $composer_manager->writeComposerFile();
-//
-//  // Clear the Drupal cache.
-//  drupal_flush_all_caches();
+  foreach ($modules_to_dsable as $module) {
+    if (\Drupal::moduleHandler()->moduleExists($module)) {
+      \Drupal::moduleHandler()->disable([$module]);
+      drupal_flush_all_caches();
+      \Drupal::logger('customy')->notice('Disabled the "@module" module.', ['@module' => $module]);
+    }
+  }
 }
