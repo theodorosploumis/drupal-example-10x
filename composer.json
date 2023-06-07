@@ -11,6 +11,7 @@
     ],
     "require": {
         "composer/installers": "^2.0",
+        "cweagans/composer-patches": "^1.7",
         "drupal/admin_toolbar": "^3.4",
         "drupal/automatic_updates": "^2.7",
         "drupal/cl_server": "^2.0@beta",
@@ -53,7 +54,8 @@
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
             "phpstan/extension-installer": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "cweagans/composer-patches": true
         },
         "sort-packages": true
     },
@@ -61,6 +63,11 @@
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
+            }
+        },
+        "patches": {
+            "drupal/core": {
+                "https://dgo.to/2982052 | Allow an install hook in profiles installing from configuration": "https://git.drupalcode.org/project/drupal/-/merge_requests/3138.diff"
             }
         },
         "installer-paths": {
