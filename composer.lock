@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "233e134582a63f177b83ed57b284e0b6",
+    "content-hash": "e3173ad6ca0c4cbedfa8e07ba5f6ae55",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2752,6 +2752,47 @@
                 "source": "https://github.com/drupal/core-recommended/tree/10.0.9"
             },
             "time": "2023-05-03T09:53:20+00:00"
+        },
+        {
+            "name": "drupal/core-vendor-hardening",
+            "version": "10.0.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/drupal/core-vendor-hardening.git",
+                "reference": "45e4f9ad3353531139bcdde280122b051df0dbe8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/drupal/core-vendor-hardening/zipball/45e4f9ad3353531139bcdde280122b051df0dbe8",
+                "reference": "45e4f9ad3353531139bcdde280122b051df0dbe8",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^2",
+                "php": ">=7.3.0"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Drupal\\Composer\\Plugin\\VendorHardening\\VendorHardeningPlugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Drupal\\Composer\\Plugin\\VendorHardening\\": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Hardens the vendor directory for when it's in the docroot.",
+            "homepage": "https://www.drupal.org/project/drupal",
+            "keywords": [
+                "drupal"
+            ],
+            "support": {
+                "source": "https://github.com/drupal/core-vendor-hardening/tree/10.0.9"
+            },
+            "time": "2022-12-07T11:22:37+00:00"
         },
         {
             "name": "drupal/devel",
@@ -10091,7 +10132,47 @@
             "time": "2022-06-03T18:03:27+00:00"
         }
     ],
-    "packages-dev": [],
+    "packages-dev": [
+        {
+            "name": "chi-teck/theme_inspector",
+            "version": "1.0.0-beta3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Chi-teck/theme-inspector.git",
+                "reference": "6bfecae5046786cbcaa89b84b59e7b9e39c7a26d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Chi-teck/theme-inspector/zipball/6bfecae5046786cbcaa89b84b59e7b9e39c7a26d",
+                "reference": "6bfecae5046786cbcaa89b84b59e7b9e39c7a26d",
+                "shasum": ""
+            },
+            "require": {
+                "drupal/core": "^9 || ^10.0",
+                "ext-json": "*",
+                "php": ">=8.1"
+            },
+            "require-dev": {
+                "chi-teck/trafaret": "^1.0"
+            },
+            "type": "drupal-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Theme Inspector.",
+            "homepage": "https://www.drupal.org/project/theme_inspector",
+            "keywords": [
+                "drupal",
+                "theming"
+            ],
+            "support": {
+                "issues": "https://www.drupal.org/project/issues/theme_inspector",
+                "source": "https://git.drupalcode.org/project/theme_inspector"
+            },
+            "time": "2022-04-18T13:56:55+00:00"
+        }
+    ],
     "aliases": [],
     "minimum-stability": "beta",
     "stability-flags": {
@@ -10101,7 +10182,8 @@
         "drupal/gin": 5,
         "drupal/gin_toolbar": 5,
         "drupal/nomarkup": 20,
-        "drupal/sdc": 15
+        "drupal/sdc": 15,
+        "chi-teck/theme_inspector": 10
     },
     "prefer-stable": true,
     "prefer-lowest": false,

@@ -20,6 +20,7 @@
         "drupal/config_devel": "^1.9",
         "drupal/core-composer-scaffold": "^10.0",
         "drupal/core-recommended": "^10.0",
+        "drupal/core-vendor-hardening": "^10.0",
         "drupal/devel": "^5.1",
         "drupal/ds": "^5.0@alpha",
         "drupal/eca": "^1.1",
@@ -55,11 +56,16 @@
             "drupal/core-project-message": true,
             "phpstan/extension-installer": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
-            "cweagans/composer-patches": true
+            "cweagans/composer-patches": true,
+            "drupal/core-vendor-hardening": true
         },
         "sort-packages": true
     },
     "extra": {
+        "composer-exit-on-patch-failure": true,
+        "drupal-core-vendor-hardening": {
+            "drush/drush": ["docs"]
+        },
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
@@ -99,5 +105,8 @@
                 "type:drupal-custom-theme"
             ]
         }
+    },
+    "require-dev": {
+        "chi-teck/theme_inspector": "^1.0@beta"
     }
 }

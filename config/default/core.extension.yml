@@ -49,6 +49,9 @@ module:
   system: 0
   taxonomy: 0
   text: 0
+  theme_inspector: 0
+  theme_inspector_common: 0
+  theme_inspector_form: 0
   toolbar: 0
   tour: 0
   tracer: 0
