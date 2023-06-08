@@ -3,20 +3,7 @@ _core:
 build_mode: production
 runtime: npm
 renderer: node
-projects:
-  -
-    source:
-      location: ../assets/app
-      watch_outdated: true
-    build:
-      production:
-        location: sites/all/assets/app
-        location_ssr: sites/all/assets/app_ssr
-        script: production
-      development:
-        location: sites/all/assets/app_dev
-        location_ssr: sites/all/assets/app_dev_ssr
-        script: development
+projects: {  }
 defaults:
   library:
     header: false

@@ -59,6 +59,7 @@
             "cweagans/composer-patches": true,
             "drupal/core-vendor-hardening": true
         },
+        "secure-http": true,
         "sort-packages": true
     },
     "extra": {
