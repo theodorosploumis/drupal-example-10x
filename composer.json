@@ -18,9 +18,9 @@
         "drupal/component_builder": "^3.0",
         "drupal/components": "^3.0@beta",
         "drupal/config_devel": "^1.9",
-        "drupal/core-composer-scaffold": "^10.0",
-        "drupal/core-recommended": "^10.0",
-        "drupal/core-vendor-hardening": "^10.0",
+        "drupal/core-composer-scaffold": "^10.1",
+        "drupal/core-recommended": "^10.1",
+        "drupal/core-vendor-hardening": "^10.1",
         "drupal/devel": "^5.1",
         "drupal/ds": "^5.0@alpha",
         "drupal/eca": "^1.1",
@@ -31,23 +31,25 @@
         "drupal/gin_toolbar": "^1.0@RC",
         "drupal/layout_builder_restrictions": "^2.18",
         "drupal/nomarkup": "1.x-dev@dev",
-        "drupal/sdc": "^2.0@alpha",
         "drupal/simplei": "^2.1",
         "drupal/styleguide": "^2.1",
         "drupal/tailwind_jit": "^1.0",
         "drupal/tailwindcss_utility": "^2.0",
         "drupal/ui_patterns": "^1.5",
         "drupal/vite": "^1.0",
-        "drupal/webprofiler": "^10.0",
+        "drupal/webprofiler": "10.0.x-dev@dev",
         "drush/drush": "^11.5",
         "symfony/ux-react": "^2.9",
         "symfony/ux-twig-component": "^2.9",
         "symfony/webpack-encore-bundle": "^2.0"
     },
+    "require-dev": {
+        "chi-teck/theme_inspector": "^1.0@beta"
+    },
     "conflict": {
         "drupal/drupal": "*"
     },
-    "minimum-stability": "beta",
+    "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
         "allow-plugins": {
@@ -106,8 +108,5 @@
                 "type:drupal-custom-theme"
             ]
         }
-    },
-    "require-dev": {
-        "chi-teck/theme_inspector": "^1.0@beta"
     }
 }
