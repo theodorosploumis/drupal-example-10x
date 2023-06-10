@@ -7,6 +7,10 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
         }
     ],
     "require": {
@@ -14,23 +18,39 @@
         "cweagans/composer-patches": "^1.7",
         "drupal/admin_toolbar": "^3.4",
         "drupal/automatic_updates": "^2.7",
-        "drupal/cl_server": "^2.0@beta",
+        "drupal/cl_server": "2.x-dev@dev",
         "drupal/component_builder": "^3.0",
         "drupal/components": "^3.0@beta",
         "drupal/config_devel": "^1.9",
+        "drupal/config_views": "^2.0@dev",
         "drupal/core-composer-scaffold": "^10.1",
         "drupal/core-recommended": "^10.1",
         "drupal/core-vendor-hardening": "^10.1",
+        "drupal/default_content": "^2.0@alpha",
         "drupal/devel": "^5.1",
+        "drupal/dfm": "^2.0",
         "drupal/ds": "^5.0@alpha",
+        "drupal/dxpr_builder": "^2.2",
+        "drupal/dxpr_theme": "^5.1",
+        "drupal/dxpr_theme_helper": "^1.0",
         "drupal/eca": "^1.1",
+        "drupal/editoria11y": "^2.0",
         "drupal/entrypoints": "^1.0",
+        "drupal/features": "^3.13",
         "drupal/field_group": "^3.4",
+        "drupal/file_browser": "^1.4",
+        "drupal/filebrowser": "^3.1@RC",
+        "drupal/flmngr": "^2.10",
+        "drupal/formdazzle": "^3.0",
         "drupal/frontend_editing": "^1.1",
         "drupal/gin": "^3.0@RC",
         "drupal/gin_toolbar": "^1.0@RC",
+        "drupal/gutenberg": "^2.7",
+        "drupal/imce": "^3.0",
         "drupal/layout_builder_restrictions": "^2.18",
         "drupal/nomarkup": "1.x-dev@dev",
+        "drupal/paragraphs": "^1.15",
+        "drupal/same_page_preview": "^2.1",
         "drupal/simplei": "^2.1",
         "drupal/styleguide": "^2.1",
         "drupal/tailwind_jit": "^1.0",
@@ -38,13 +58,21 @@
         "drupal/ui_patterns": "^1.5",
         "drupal/vite": "^1.0",
         "drupal/webprofiler": "10.0.x-dev@dev",
+        "drupal/xray_audit": "^1.3",
         "drush/drush": "^11.5",
         "symfony/ux-react": "^2.9",
         "symfony/ux-twig-component": "^2.9",
-        "symfony/webpack-encore-bundle": "^2.0"
+        "symfony/webpack-encore-bundle": "^2.0",
+        "tplcom/stand-with-cyprus": "dev-main"
     },
     "require-dev": {
-        "chi-teck/theme_inspector": "^1.0@beta"
+        "acquia/drupal-spec-tool": "^6.0@alpha",
+        "chi-teck/theme_inspector": "^1.0@beta",
+        "drupal/coder": "^8.3",
+        "drupal/status_dependencies": "1.0.x-dev@dev",
+        "kint-php/kint": "^5.0",
+        "marcocesarato/php-conventional-changelog": "^1.17",
+        "roave/security-advisories": "dev-latest"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -64,6 +92,12 @@
         "secure-http": true,
         "sort-packages": true
     },
+    "scripts": {
+        "stand": "php scripts/StandWithCyprus.php",
+        "post-autoload-dump": [
+            "stand-with-cyprus"
+        ]
+    },
     "extra": {
         "composer-exit-on-patch-failure": true,
         "drupal-core-vendor-hardening": {
@@ -77,6 +111,9 @@
         "patches": {
             "drupal/core": {
                 "https://dgo.to/2982052 | Allow an install hook in profiles installing from configuration": "https://git.drupalcode.org/project/drupal/-/merge_requests/3138.diff"
+            },
+            "drupal/tailwindcss_utility": {
+                "https://dgo.to/3355774 | Symfony 5, 6 support": "https://www.drupal.org/files/issues/2023-04-22/3355774.patch"
             }
         },
         "installer-paths": {
@@ -84,7 +121,9 @@
                 "type:drupal-core"
             ],
             "web/libraries/{$name}": [
-                "type:drupal-library"
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset"
             ],
             "web/modules/contrib/{$name}": [
                 "type:drupal-module"
@@ -107,6 +146,10 @@
             "web/themes/custom/{$name}": [
                 "type:drupal-custom-theme"
             ]
-        }
+        },
+        "installer-types": [
+            "bower-asset",
+            "npm-asset"
+        ]
     }
 }

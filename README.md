@@ -8,3 +8,8 @@ ddev start
 ddev composer install
 ddev drush si --existing-config
 ```
+
+## Similar projects
+
+- https://github.com/theodorosploumis/drupal-experiments
+- https://github.com/theodorosploumis/gitpod-drupal-workspace

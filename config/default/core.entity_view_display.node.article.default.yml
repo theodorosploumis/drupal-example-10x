@@ -11,6 +11,7 @@ dependencies:
   module:
     - field_layout
     - image
+    - layout_builder
     - layout_discovery
     - text
     - user
@@ -19,6 +20,75 @@ third_party_settings:
     id: layout_onecol
     settings:
       label: ''
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          e77afdd0-3525-4b01-a5c7-48fa6d5c6d36:
+            uuid: e77afdd0-3525-4b01-a5c7-48fa6d5c6d36
+            region: content
+            configuration:
+              id: 'field_block:node:article:field_image'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: wide
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          a903bae2-af59-4f55-aef0-652a5406875a:
+            uuid: a903bae2-af59-4f55-aef0-652a5406875a
+            region: content
+            configuration:
+              id: 'field_block:node:article:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          d0073cd9-b338-42e8-896c-eedce0d39370:
+            uuid: d0073cd9-b338-42e8-896c-eedce0d39370
+            region: content
+            configuration:
+              id: 'field_block:node:article:field_tags'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          066ad2f9-a593-44ed-9089-35ff149dfaa2:
+            uuid: 066ad2f9-a593-44ed-9089-35ff149dfaa2
+            region: content
+            configuration:
+              id: 'extra_field_block:node:article:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 3
+            additional: {  }
+        third_party_settings: {  }
 _core:
   default_config_hash: 7fb0j9HnIXfP9ndewzgPPzzeX_SV532wuYpkscrCMCk
 id: node.article.default

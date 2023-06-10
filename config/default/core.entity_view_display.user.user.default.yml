@@ -8,6 +8,7 @@ dependencies:
   module:
     - field_layout
     - image
+    - layout_builder
     - layout_discovery
     - user
 third_party_settings:
@@ -15,6 +16,44 @@ third_party_settings:
     id: layout_onecol
     settings:
       label: ''
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          2d5079a3-431a-45f5-bc39-cbb95535b572:
+            uuid: 2d5079a3-431a-45f5-bc39-cbb95535b572
+            region: content
+            configuration:
+              id: 'field_block:user:user:user_picture'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: content
+                  image_style: thumbnail
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          4a3b68bf-10f6-4c47-b6c7-55059136143a:
+            uuid: 4a3b68bf-10f6-4c47-b6c7-55059136143a
+            region: content
+            configuration:
+              id: 'extra_field_block:user:user:member_for'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
 _core:
   default_config_hash: mZLyuWM9CQx2ZJVqFGSbzgFnHzudVbHBYmdU256A5Wk
 id: user.user.default
@@ -23,6 +62,8 @@ bundle: user
 mode: default
 content:
   member_for:
+    settings: {  }
+    third_party_settings: {  }
     weight: 5
     region: content
   user_picture:
