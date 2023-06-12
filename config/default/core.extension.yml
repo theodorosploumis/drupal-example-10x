@@ -10,6 +10,7 @@ module:
   block_content: 0
   breakpoint: 0
   ckeditor5: 0
+  coffee: 0
   comment: 0
   component_builder: 0
   config: 0
@@ -23,12 +24,15 @@ module:
   devel_generate: 0
   editor: 0
   editoria11y: 0
+  editorskit: 0
   entity: 0
   field: 0
   field_layout: 0
   file: 0
   filter: 0
   gin_toolbar: 0
+  gutenberg: 0
+  gutenberg_cloud: 0
   help: 0
   help_topics: 0
   history: 0
@@ -43,6 +47,12 @@ module:
   menu_ui: 0
   mysql: 0
   node: 0
+  openai: 0
+  openai_chatgpt: 0
+  openai_ckeditor: 0
+  openai_content: 0
+  openai_embeddings: 0
+  openai_prompt: 0
   options: 0
   package_manager: 0
   path: 0
