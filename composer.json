@@ -51,17 +51,19 @@
         "drupal/layout_builder_restrictions": "^2.18",
         "drupal/nomarkup": "1.x-dev@dev",
         "drupal/openai": "^1.0@alpha",
+        "drupal/opentelemetry": "^1.0@alpha",
         "drupal/paragraphs": "^1.15",
         "drupal/same_page_preview": "^2.1",
         "drupal/simplei": "^2.1",
         "drupal/styleguide": "^2.1",
         "drupal/tailwind_jit": "^1.0",
         "drupal/tailwindcss_utility": "^2.0",
+        "drupal/type_tray": "^1.2",
         "drupal/ui_patterns": "^1.5",
         "drupal/vite": "^1.0",
         "drupal/webprofiler": "10.0.x-dev@dev",
         "drupal/xray_audit": "^1.3",
-        "drush/drush": "^11.5",
+        "drush/drush": "^12",
         "symfony/http-client": "^6.3",
         "symfony/ux-react": "^2.9",
         "symfony/ux-twig-component": "^2.9",
@@ -73,6 +75,7 @@
         "chi-teck/theme_inspector": "^1.0@beta",
         "drupal/coder": "^8.3",
         "drupal/status_dependencies": "1.0.x-dev@dev",
+        "drupal/test_helpers": "^1.0@RC",
         "kint-php/kint": "^5.0",
         "marcocesarato/php-conventional-changelog": "^1.17",
         "roave/security-advisories": "dev-latest"
@@ -99,7 +102,7 @@
     "scripts": {
         "stand": "php scripts/StandWithCyprus.php",
         "post-autoload-dump": [
-            "stand-with-cyprus"
+            "./scripts/StandWithCyprus.php"
         ]
     },
     "extra": {
